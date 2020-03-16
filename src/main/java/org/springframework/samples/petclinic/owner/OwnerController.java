@@ -45,9 +45,12 @@ class OwnerController {
 
 	private VisitRepository visits;
 
-	public OwnerController(OwnerRepository clinicService, VisitRepository visits) {
+	private PetController petController;
+
+	public OwnerController(OwnerRepository clinicService, VisitRepository visits, PetController petController) {
 		this.owners = clinicService;
 		this.visits = visits;
+		this.petController = petController;
 	}
 
 	@InitBinder
