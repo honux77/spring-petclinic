@@ -11,6 +11,7 @@ public class SampleController {
 
     @ResponseBody
     @GetMapping
+    @LogExecutionTime
     public SimpleResult hello() {
         return new SimpleResult("OK", "Hello");
     }
